@@ -81,6 +81,9 @@ class Port {
 public:
 	Port();
 	virtual ~Port();
+	/*! \brief Opens a connection with the UART device
+	 *@param 
+	openPort(const char * portName);
 };
 #endif /* DYNAMIXEL_H_ */
 
