@@ -57,24 +57,30 @@ public:
 	 * @param iMotorId The id of the motor that the packet is being generated for
 	 * @param iStartRegister The L register being read
 	 */
-	const std::vector<unsigned char>& makeReadWord(int iMotorId, int iStartRegister);
-
+	const std::vector<unsigned char>& makeReadWord(int iMotorId,
+			int iStartRegister);
 
 	/*! \brief Generates a WRITE instruction packet for writing 1 byte
 	 * @param iMotorId The id of the motor that the packet is being generated for
 	 * @param iRegister The register being written to
 	 * @param iValue The value being written to the register
 	 */
-	const std::vector<unsigned char>& makeWriteByte(int iMotorId, int iRegister, int iValue);
+	const std::vector<unsigned char>& makeWriteByte(int iMotorId, int iRegister,
+			int iValue);
 
 	/*! \brief Generates a WRITE instruction packet for writing 2 bytes
 	 * @param iMotorId The id of the motor that the packet is being generated for
 	 * @param iStartRegister The L register being written to
 	 * @param iValue The value being written to the registers
 	 */
-	const std::vector<unsigned char>& makeWriteWord(int iMotorId, int iStartRegister, int iValue);
+	const std::vector<unsigned char>& makeWriteWord(int iMotorId,
+			int iStartRegister, int iValue);
 };
 
-
-
+class Port {
+public:
+	Port();
+	virtual ~Port();
+};
 #endif /* DYNAMIXEL_H_ */
+
